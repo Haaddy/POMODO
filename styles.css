@@ -1,45 +1,83 @@
-body{
-    background-color: #1a1918;
-    
+@import url(/POMODO/styles/varaibles.css);
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
+
 .wrapper{
-    width: 50%;
-    margin: auto;
+    background-color: var(--bg-color);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.time-txt{
-    color: white;
-    font-size: 80px;
-    width: 50%;
-    margin: auto;
+
+.pomodo{
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,100px);
 
 }
+
+p{
+    font-family: "Rubik", sans-serif;
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 100px;
+}
+
 .btn{
-    margin-top: 25px;
-    border-radius: 15px;
-    width: 150px;
-    height: 50px;
-    background-color: white;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    color: whitesmoke;
+    background-color:var(--btn-color);
     border: none;
-    font-size: 20px;
-   
-    
-}
-.btn-choise{
-    width: 150px;
-    height: 50px;
-    background-color: white;
     border-radius: 15px;
-    border: none;
-    font-size: 20px;
-    text-align: center;
-    align-content: center;
-    
+    height: 40px;
+    width: 150px;
 }
-.btn-container{
-    display: flex;
-    justify-content: space-between;
+.pomodo__pomodoro-btn{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
 }
-.category-container{
-    display: flex;
-    justify-content: space-between;
+.pomodo__short-btn{
+   grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1; 
+}
+.pomodo__long-btn{
+   grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1; 
+}
+.pomodo__start-btn{
+   grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3; 
+}
+.pomodo__pause-btn{
+   grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3; 
+}
+.pomodo__reset-btn{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 3; 
+}
+.pomodo__time-txt{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
 }
