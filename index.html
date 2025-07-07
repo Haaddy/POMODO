@@ -4,24 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
     <title>Pomodo</title>
 </head>
 <body>
-    <div class="wrapper">
+    <!--just wrapper fot my content his size like body size  -->
+    <div class="wrapper"> 
+        <section class="pomodo">
+            <button id="pomodoro" class="pomodo__pomodoro-btn btn">Pomodo</button>
+            <button id="short" class="pomodo__short-btn btn">short break</button>
+            <button id="long" class="pomodo__long-btn btn">long break</button>
+            <p id="timer" class="pomodo__time-txt">25:00</p>
+             <button id="start-btn" class="pomodo__start-btn btn">start</button>
+            <button id = 'pause-btn' class="pomodo__pause-btn btn">pause</button>
+            <button id="reset" class="pomodo__reset-btn btn">reset</button>
+        </section>
+    </div>
+
+
+
+
+
+    <!-- <div class="wrapper">
         <div class="category-container">
-            <buton id="pomodoro" class="btn-choise">Pomodo</buton>
-            <buton id="short" class="btn-choise">short break</buton>
-            <buton id="long" class="btn-choise">long break</buton>
+            
         </div>
-        <p id="timer" class="time-txt">25:00</p>
+        
         <div class="btn-container ">
-            <button id="start-btn" class="start-btn btn">start</button>
-            <button id = 'pause-btn' class="pause-btn btn">pause</button>
-            <button id="reset" class="btn">reset</button>
+           
         </div>
            
-    </div>
+    </div> -->
     
     
     <script src="main.js"></script>
