@@ -15,29 +15,37 @@ html, body {
 }
 
 .pomodo{
-    width: 75%;
+    
+    min-width: 1280px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3,100px);
+    grid-template-rows: repeat(3, 150px);
+    justify-items: center;
+    align-items: center;
 
 }
-
+.pomodo__time-txt{
+    
+    font-size: clamp(1rem, -4.982rem + 15.952vw, 9.375rem);
+}
 p{
     font-family: "Rubik", sans-serif;
     color: whitesmoke;
     font-weight: 600;
-    font-size: 100px;
+    
 }
 
 .btn{
     font-family: "Rubik", sans-serif;
     font-weight: 500;
+    
+    font-size: 45px;
     color: whitesmoke;
     background-color:var(--btn-color);
     border: none;
     border-radius: 15px;
-    height: 40px;
-    width: 150px;
+    height: 70px;
+    width: 300px;
 }
 .pomodo__pomodoro-btn{
     grid-column-start: 1;
@@ -78,6 +86,6 @@ p{
 .pomodo__time-txt{
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
