@@ -9,6 +9,8 @@ let pomodoroBtn = document.getElementById('pomodoro');
 let shortBreakBtn = document.getElementById('short');
 let longBreakBtn = document.getElementById('long');
 
+let isStart = false;
+
 let pomodoro = {
     leftTime: 25 * 60,
     choise: true,
@@ -101,7 +103,10 @@ let longBreak ={
 }
 
 startBtn.addEventListener("click", () => {
-
+    if (isStart) {
+        return
+    }
+    isStart = true;
     if(pomodoro.choise == true){
         pomodoro.UpdateTimer();
         startBtn.innerText = "Resume";
@@ -123,11 +128,12 @@ startBtn.addEventListener("click", () => {
 
 pauseBtn.addEventListener("click", () =>{
     // pauseTime();
+    isStart = false;
     clearInterval(timerID);
 })
 
 resetBtn.addEventListener("click",()=>{
-
+    isStart =false;
     if (pomodoro.choise==true) {
         pomodoro.resetTime();
     }else if (shortBreak.choise == true) {
@@ -140,6 +146,7 @@ resetBtn.addEventListener("click",()=>{
 })
 
 shortBreakBtn.addEventListener("click", ()=>{
+    isStart= false;
     console.log("short choise");
     UItime.innerText = "5:00"
     shortBreak.choise = true;
@@ -150,6 +157,7 @@ shortBreakBtn.addEventListener("click", ()=>{
 })
 
 pomodoroBtn.addEventListener("click", ()=>{
+    isStart= false;
     console.log("pomodor choise");
     UItime.innerText = "25:00"
     shortBreak.choise = false;
@@ -159,6 +167,7 @@ pomodoroBtn.addEventListener("click", ()=>{
 })
 
 longBreakBtn.addEventListener("click", ()=>{
+    isStart= false;
     console.log("long choise");
     UItime.innerText = "10:00"
     shortBreak.choise = false;
