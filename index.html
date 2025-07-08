@@ -32,9 +32,9 @@
         <div id="modal" class="modal hidden">
             <div class="modal-content">
                 <h2>Настройки таймера</h2>
-                <label>Помодоро: <input id="pomodoro-input" type="number" min="1" /></label>
-                <label>Короткий перерыв: <input id="short-input" type="number" min="1" /></label>
-                <label>Длинный перерыв: <input id="long-input" type="number" min="1" /></label>
+                <label>Помодоро: <input id="pomodoro-input" type="number" value="25" min="1" max="60" /></label>
+                <label>Короткий перерыв: <input id="short-input" type="number" value="5" min="1" max="60" /></label>
+                <label>Длинный перерыв: <input id="long-input" type="number" value="10" min="1" max="60" /></label>
                 <button id="save-settings">Сохранить</button>
                 <button id="close-modal">Закрыть</button>
             </div>

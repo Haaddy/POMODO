@@ -4,12 +4,19 @@ let timerID;
 let startBtn = document.getElementById('start-btn');
 let pauseBtn = document.getElementById('pause-btn')
 let resetBtn = document.getElementById('reset');
+let settingBtn = document.getElementById('setting-btn');
+let modal = document.getElementById('modal');
+let closeModalBtn = document.getElementById('close-modal');
+let saveModalBtn = document.getElementById('save-settings');
+let pomodoroInput = document.getElementById('pomodoro-input');
+let shortInput = document.getElementById('short-input');
+let longInput = document.getElementById('long-input');
 
 let pomodoroBtn = document.getElementById('pomodoro');
 let shortBreakBtn = document.getElementById('short');
 let longBreakBtn = document.getElementById('long');
 
-const timersSetings = {
+const timersSettings = {
     pomodoro: 25,
     short: 5,
     long: 10
@@ -62,8 +69,27 @@ class Timer {
     }
 }
 
+function updateTimerData(){
+    let pomodoroNewTime = parseInt(pomodoroInput.value);
+    let shortNewTime = parseInt(shortInput.value);
+    let longNewTime = parseInt(longInput.value);
 
-const pomodoTimer = new Timer(timersSetings.pomodoro);
+    if (!isNaN(pomodoroNewTime)) timersSettings.pomodoro = pomodoroNewTime;
+    if (!isNaN(shortNewTime)) timersSettings.short = shortNewTime;
+    if (!isNaN(longNewTime)) timersSettings.long = longNewTime;
+
+
+    pomodoTimer.setDuration(timersSettings.pomodoro);
+    console.log("change complite");
+    
+
+}
+
+
+const pomodoTimer = new Timer(timersSettings.pomodoro);
+
+
+
 
 
 startBtn.addEventListener("click", () => {
@@ -84,17 +110,29 @@ resetBtn.addEventListener("click",()=>{
 
 shortBreakBtn.addEventListener("click", ()=>{
     console.log("short choise");
-     pomodoTimer.isStart = false;
-    pomodoTimer.setDuration(timersSetings.short);
+    pomodoTimer.pause();
+    pomodoTimer.setDuration(timersSettings.short);
 })
 longBreakBtn.addEventListener("click", ()=>{
     console.log("short choise");
-     pomodoTimer.isStart = false;
-    pomodoTimer.setDuration(timersSetings.long);
+    pomodoTimer.pause();
+    pomodoTimer.setDuration(timersSettings.long);
 })
 pomodoroBtn.addEventListener("click", ()=>{
     console.log("short choise");
-    pomodoTimer.isStart = false;
-    pomodoTimer.setDuration(timersSetings.pomodoro);
+    pomodoTimer.pause();
+    pomodoTimer.setDuration(timersSettings.pomodoro);
+})
+
+settingBtn.addEventListener("click", ()=>{
+    modal.classList.remove('hidden');
+})
+
+closeModalBtn.addEventListener("click", ()=>{
+    modal.classList.add("hidden");
+})
+
+saveModalBtn.addEventListener("click", ()=>{
+    updateTimerData();
 })
 

@@ -94,7 +94,6 @@ p{
 }
 
 .setting-btn{
-    position: absolute;
-    top: 5%;
-    left: 96%;
+    position: relative;
+    top:-350px;
 }
