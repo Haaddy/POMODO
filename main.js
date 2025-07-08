@@ -9,7 +9,11 @@ let pomodoroBtn = document.getElementById('pomodoro');
 let shortBreakBtn = document.getElementById('short');
 let longBreakBtn = document.getElementById('long');
 
-
+const timersSetings = {
+    pomodoro: 25,
+    short: 5,
+    long: 10
+}
 
 class Timer {
     constructor(minutes) {
@@ -59,7 +63,7 @@ class Timer {
 }
 
 
-const pomodoTimer = new Timer(25);
+const pomodoTimer = new Timer(timersSetings.pomodoro);
 
 
 startBtn.addEventListener("click", () => {
@@ -81,16 +85,16 @@ resetBtn.addEventListener("click",()=>{
 shortBreakBtn.addEventListener("click", ()=>{
     console.log("short choise");
      pomodoTimer.isStart = false;
-    pomodoTimer.setDuration(5);
+    pomodoTimer.setDuration(timersSetings.short);
 })
 longBreakBtn.addEventListener("click", ()=>{
     console.log("short choise");
      pomodoTimer.isStart = false;
-    pomodoTimer.setDuration(10);
+    pomodoTimer.setDuration(timersSetings.long);
 })
 pomodoroBtn.addEventListener("click", ()=>{
     console.log("short choise");
     pomodoTimer.isStart = false;
-    pomodoTimer.setDuration(25);
+    pomodoTimer.setDuration(timersSetings.pomodoro);
 })
 

@@ -7,9 +7,12 @@ html, body {
 }
 
 .wrapper{
+    position: relative;
     background-color: var(--bg-color);
     height: 100%;
     display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
     justify-content: center;
     align-items: center;
 }
@@ -88,4 +91,10 @@ p{
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
+}
+
+.setting-btn{
+    position: absolute;
+    top: 5%;
+    left: 96%;
 }
