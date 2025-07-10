@@ -33,6 +33,7 @@ class Timer {
 
     UpdateTimer() {
         if (this.leftTime <= 0) {
+            this.playEndTimerSound();
             clearInterval(timerID);
             console.log("time end");
             return;
@@ -74,6 +75,19 @@ class Timer {
     pause(){
         pomodoTimer.isStart = false;
         clearInterval(timerID)
+    }
+
+    playEndTimerSound(){
+        console.log("play sound");
+        
+        let sound = new Audio('sounds/bell.wav');
+        sound.volume = 0.2
+        ;
+        sound.play();
+        setTimeout(() => {
+            sound.pause();
+            sound.currentTime = 0; 
+        }, 5000); 
     }
 }
 
