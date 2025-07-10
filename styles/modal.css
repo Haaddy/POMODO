@@ -13,11 +13,76 @@
 
 
 .modal-content {
-  background: white;
+  background: #2c2c3a;
   padding: 20px;
   border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+
 }
 
 .hidden {
   display: none;
+}
+.modal-body{
+  
+  display: flex;
+  /* gap: 20px; */
+
+  flex-wrap: wrap;
+  margin-left: 35px;
+  justify-content: space-around;
+  
+  
+}
+.modal-btn{
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+    
+  font-size: 15px;
+  color: whitesmoke;
+  background-color:var(--btn-color);
+  border: none;
+  border-radius: 15px;
+  width: 100px;
+  height: 30px;
+  
+  
+  
+}
+label{
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  flex-direction: column ;
+}
+label input{
+  font-family: "Rubik", sans-serif;
+  margin-top: 10px;
+  background: #2c2c3a;
+  color: white;
+  
+  border: solid #555 1px;
+  border-radius: 5px;
+  text-align: center;
+  width: 40px;
+  height: 20px;
+}
+
+
+.modal-actions{
+  display: flex;
+  margin-top: 30px;
+  gap: 10px;
+  width: 100%;
+  justify-content: flex-end;
+}
+.modal-menu p{
+  font-family: "Rubik", sans-serif;
+  color: white;
+  font-size: 15px;
+}
+.modal-close-btn{
+  background-color: #ff6f61;
 }

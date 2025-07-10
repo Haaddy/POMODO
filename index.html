@@ -29,14 +29,24 @@
         <button id="setting-btn" class="setting-btn">Setings</button>
 
     </div>  
-        <div id="modal" class="modal hidden">
+        <div id="modal" class="modal ">
             <div class="modal-content">
-                <h2>Настройки таймера</h2>
-                <label>Помодоро: <input id="pomodoro-input" type="number" value="25" min="1" max="60" /></label>
-                <label>Короткий перерыв: <input id="short-input" type="number" value="5" min="1" max="60" /></label>
-                <label>Длинный перерыв: <input id="long-input" type="number" value="10" min="1" max="60" /></label>
-                <button id="save-settings">Сохранить</button>
-                <button id="close-modal">Закрыть</button>
+                <nav class="modal-menu">
+                    <p>Timer Settings</p>
+                </nav>
+                <div class="modal-body">
+                    <label>Pomodoro: <input id="pomodoro-input" type="number" value="25" min="1" max="60" /></label>
+                    <label>Short break: <input id="short-input" type="number" value="5" min="1" max="60" /></label>
+                    <label>Long Break: <input id="long-input" type="number" value="10" min="1" max="60" /></label>
+                    <div class="modal-actions">
+                        <button id="save-settings" class="modal-btn">Save</button>
+                        <button id="close-modal" class="modal-close-btn modal-btn ">Close</button>
+                    </div>
+                    
+                </div>
+                
+                
+                
             </div>
         </div>
     <script src="main.js"></script>
