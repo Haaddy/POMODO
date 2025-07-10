@@ -55,9 +55,17 @@ class Timer {
     }
 
     updateScreen(){
-        let minutes = Math.floor(this.leftTime / 60);
+        let hours = Math.floor(this.leftTime / 3600);
+        let minutes = Math.floor((this.leftTime % 3600) / 60);
         let seconds = this.leftTime % 60;
-        const formatTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        let formatTime;
+
+        if (hours == 0) {
+              formatTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }else{
+             formatTime = `${String(hours).padStart(2,'0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+       
 
         console.log(this.leftTime);
         UItime.innerText = formatTime;
